@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const desktopNavStyle = "text-gray-800 hover:text-indigo-600 font-medium";
+  const mobileNavStyle = "block py-2 text-gray-800 hover:text-indigo-600";
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -30,22 +32,22 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-800 hover:text-indigo-600 font-medium">Home</a>
-            <a href="#about" className="text-gray-800 hover:text-indigo-600 font-medium">About</a>
-            <a href="#strengths" className="text-gray-800 hover:text-indigo-600 font-medium">Strengths</a>
-            <a href="#services" className="text-gray-800 hover:text-indigo-600 font-medium">Services</a>
-            <a href="#contact" className="text-gray-800 hover:text-indigo-600 font-medium">Contact</a>
+            <a href="#home" className={desktopNavStyle}>Home</a>
+            <a href="#about" className={desktopNavStyle}>About</a>
+            <a href="#strengths" className={desktopNavStyle}>Strengths</a>
+            <a href="#services" className={desktopNavStyle}>Services</a>
+            <a href="#contact" className={desktopNavStyle}>Contact</a>
           </nav>
         </div>
         
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4">
-            <a href="#home" className="block py-2 text-gray-800 hover:text-indigo-600">Home</a>
-            <a href="#about" className="block py-2 text-gray-800 hover:text-indigo-600">About</a>
-            <a href="#strengths" className="block py-2 text-gray-800 hover:text-indigo-600">Strengths</a>
-            <a href="#services" className="block py-2 text-gray-800 hover:text-indigo-600">Services</a>
-            <a href="#contact" className="block py-2 text-gray-800 hover:text-indigo-600">Contact</a>
+            <a href="#home" className={mobileNavStyle}>Home</a>
+            <a href="#about" className={mobileNavStyle}>About</a>
+            <a href="#strengths" className={mobileNavStyle}>Strengths</a>
+            <a href="#services" className={mobileNavStyle}>Services</a>
+            <a href="#contact" className={mobileNavStyle}>Contact</a>
           </div>
         )}
       </div>
